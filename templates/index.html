@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemstone Price Predictor App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        background: radial-gradient(circle, #ffffff 0%, #e9ecef 100%);
+    }
+    .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-zoom:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    .gem-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body class="bg-light d-flex flex-column justify-content-center align-items-center min-vh-100">
+  
+  <div class="text-center fade-in px-3">
+    <div class="gem-icon">💎</div>
+    
+    <h1 class="display-4 fw-bold text-primary mb-3">Gemstone Price Predictor</h1>
+    
+    <p class="lead text-muted mx-auto" style="max-width: 600px;">
+        Harness the power of Machine Learning to accurately estimate the market value of gemstones based on 
+        <b>Carat, Cut, Color, Clarity,</b> and physical dimensions.
+    </p>
+
+    <a href="{{ url_for('predict') }}" class="btn btn-lg btn-primary mt-4 shadow-lg hover-zoom px-5 py-3">
+        🚀 Start Prediction
+    </a>
+  </div>
+
+  <footer class="footer mt-5 text-muted">
+    <small>
+        Powered by <b>Flask & MLflow</b> | © 2026 Gemstone Price Predictor | 
+        <span class="text-primary fw-bold">Created By Egglisten Samuel</span>
+    </small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
